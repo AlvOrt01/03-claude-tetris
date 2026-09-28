@@ -67,7 +67,9 @@ jobs:
                Aplica con `gh issue edit ${{ github.event.issue.number }} --add-label "..."`.
                Si el evento es "edited", quita con `--remove-label` los labels de tipo/área/prioridad que ya no apliquen.
 
-            5. Diagnóstico: escribe el cuerpo en un archivo (Write) `/tmp/triage.md`. La PRIMERA línea debe ser exactamente `<!-- claude-triage -->`. Formato en español:
+            5. Diagnóstico: escribe el cuerpo en un archivo (Write) `/tmp/triage.md`. La PRIMERA línea debe ser exactamente `<!-- claude-triage -->`.
+               El comentario DEBE estar en Markdown compatible con GitHub (GitHub Flavored Markdown): encabezados `##`/`###`, **negritas**, listas `-`, checklists `- [ ]`, `código inline` y bloques de código con triple backtick y lenguaje (ej. ```js). No uses HTML salvo el marcador inicial. Deja una línea en blanco entre encabezados, párrafos y listas para que se renderice bien.
+               Formato en español:
 
                ## 🔍 Diagnóstico automático
                **Resumen:** ...
